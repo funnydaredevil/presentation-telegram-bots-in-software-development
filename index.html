@@ -18,12 +18,48 @@
         <h2>What can we do with bots?</h2>
         <ul>
           <li></li>
+          <li><b><i>Telegram developers opinion</i></b></li>
+        </ul>
+        <ul>
           <li>Get customized notifications and news.</li>
           <li>Integrate with other services.</li>
           <li>Create custom tools.</li>
+          <li>Build single- and multiplayer games.</li>
           <li>Build social services.</li>
           <li>Do virtually anything else.</li>
         </ul>
+      </section>
+      <section>
+        <h2>How to interact?</h2>
+        <ul>
+          <li></li>
+          <li>Old good text commands.</li>
+          <li>File upload.</li>
+          <li>Buttons</li>
+          <li>
+            <div class="telegram_button_img"></div>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <pre><code class="language-javascript">Telegram::Bot::Client.run(token) do |bot|
+  bot.listen do |message|
+    case message.text
+    when '/start'
+      bot.api.send_message(
+        chat_id: message.chat.id,
+        text: "Hello, #{message.from.first_name}"
+      )
+    when '/stop'
+      bot.api.send_message(
+        chat_id: message.chat.id,
+        text: "Bye, #{message.from.first_name}"
+      )
+    ...
+    end
+  end
+end
+</code></pre>
       </section>
       <section>
         <h2>CI builds monitoring</h2>
@@ -47,6 +83,7 @@
       </section>
       <section>
         <h2>Utilities</h2>
+        <div class="separator"></div>
         <div class="utilities">
           <div class="utilities_img"></div>
           <ul class="utilities_list">
@@ -57,6 +94,15 @@
             <li>etc.</li>
           </ul>
         </div>
+      </section>
+      <section>
+        <h2>What about alternatives?</h2>
+        <ul>
+          <li></li>
+          <li>Microsoft Bot Framework</li>
+          <li>Facebook Messenger</li>
+          <li>Slack</li>
+        </ul>
       </section>
       <section>
         <h2>Questions?</h2>
