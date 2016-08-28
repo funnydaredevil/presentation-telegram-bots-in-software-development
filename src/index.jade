@@ -22,11 +22,47 @@ html
         h2 What can we do with bots?
         ul
           li
+          li
+            b
+              i Telegram developers opinion
+        ul
           li Get customized notifications and news.
           li Integrate with other services.
           li Create custom tools.
+          li Build single- and multiplayer games.
           li Build social services.
           li Do virtually anything else.
+
+      section
+        h2 How to interact?
+        ul
+          li
+          li Old good text commands.
+          li File upload.
+          li Buttons
+          li
+            .telegram_button_img
+
+      section
+        pre
+          code.language-javascript.
+            Telegram::Bot::Client.run(token) do |bot|
+              bot.listen do |message|
+                case message.text
+                when '/start'
+                  bot.api.send_message(
+                    chat_id: message.chat.id,
+                    text: "Hello, \#{message.from.first_name}"
+                  )
+                when '/stop'
+                  bot.api.send_message(
+                    chat_id: message.chat.id,
+                    text: "Bye, \#{message.from.first_name}"
+                  )
+                ...
+                end
+              end
+            end
 
       section
         h2 CI builds monitoring
@@ -50,6 +86,7 @@ html
 
       section
         h2 Utilities
+        .separator
         .utilities
           .utilities_img
           ul.utilities_list
@@ -58,6 +95,14 @@ html
             li Pwgen
             li Converters
             li etc.
+
+      section
+        h2 What about alternatives?
+        ul
+          li
+          li Microsoft Bot Framework
+          li Facebook Messenger
+          li Slack
 
       section
         h2 Questions?
