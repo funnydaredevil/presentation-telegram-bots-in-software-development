@@ -1,6 +1,6 @@
 # Telegram Bots in Software Development
 
-> View it on [github.io](https://github.com/funnydaredevil/presentation-telegram-bots-in-software-development)
+> View it on [github.io](https://funnydaredevil.github.io/presentation-telegram-bots-in-software-development/)
 
 > A [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation, built with [generator-bespoke](https://github.com/markdalgleish/generator-bespoke)
 
